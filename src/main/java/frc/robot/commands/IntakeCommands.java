@@ -9,6 +9,7 @@ public class IntakeCommands extends Command{
 
     public IntakeCommands(){
         intakeSubsystem = new IntakeSubsystem();
+        this.addRequirements(intakeSubsystem);
     }
 
     public Command setRetractedPosition(){

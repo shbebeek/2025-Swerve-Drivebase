@@ -3,18 +3,16 @@ package frc.robot.commands;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
 import frc.robot.subsystems.ArmSubsystem;
-import frc.robot.subsystems.ElevatorSubsystem;
 
 public class ArmCommands extends Command{
     ArmSubsystem armSubsystem;
-    private ElevatorSubsystem elevatorSubsystem;
     private ElevatorCommands elevatorCommands;
     
     public ArmCommands(){
         this.setName(this.getName());
         armSubsystem = new ArmSubsystem();
         elevatorCommands = new ElevatorCommands();
-        addRequirements(armSubsystem,elevatorSubsystem);
+        addRequirements(armSubsystem);
     }
 
     public Command setIdlePosition(){
